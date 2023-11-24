@@ -1,3 +1,12 @@
+<?php
+// Cek Login
+session_start();
+if(isset($_SESSION["login"])){
+    // Jika sudah, maka di redirect 
+    header("location:dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +24,7 @@
                 <div class="content col-md-6 d-flex align-items-center">
                     <div class="inner">
                         <div class="logo">
-                            <img src="assets/images/logo.png" alt="">
+                            <img src="assets/images/newlogo.png" alt="">
                         </div>
                         <h1>Welcome to HIGH SCHOOL ID</h1>
                         <p>Sistem Pendaftaran Siswa Baru 2021 / 2022</p>
@@ -24,13 +33,21 @@
                 <div class="form col-md-6 d-flex align-items-center">
                     <div class="inner">
                         <h1>Registrasi</h1>
+                        <!-- Message -->
+                        <?php if(isset($_GET["pesan"])){ ?>
+                            <div class="alert alert-info" role="alert"> 
+                                <?= $_GET["pesan"] ?>
+                            </div>
+                        <?php } ?>
+                        <!-- End Message -->
+                        <form action="action_registrasi.php" method="POST">
                         <form action="login.php">
                             <div class="form-group mb-3">
                                 <label for="nama">NAMA</label>
                                 <input type="text" class="form-control mt-1" name="nama" id="nama" aria-describedby="nama">                          
                             </div>                        
                             <div class="form-group  mb-3">
-                                <label for="email">NISN</label>
+                                <label for="email">EMAIL</label>
                                 <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="nisn">                          
                             </div>
                             <div class="form-group  mb-3">
@@ -38,7 +55,7 @@
                                 <input type="password" class="form-control mt-1" name="password" id="password">
                             </div>
                             <div class="form-group  mb-3">
-                                <small id="emailHelp" class="form-text text-muted">Sudah punya Akun ? <a href="index.html">Login</a></small>
+                                <small id="emailHelp" class="form-text text-muted">Sudah punya Akun ? <a href="index.PHP">Login</a></small>
                             </div>
                             <button type="submit" class="btn btn-primary">REGISTRASI</button>
                         </form>                    
