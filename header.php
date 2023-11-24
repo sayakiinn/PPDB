@@ -1,3 +1,6 @@
+<!-- Library PHP -->
+<?php include "libs/inc.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

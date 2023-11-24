@@ -26,8 +26,8 @@
                     <h1>Login</h1>
                     <form action="dashboard.html" method="POST">
                         <div class="form-group mb-3">
-                          <label for="nisn">EMAIL</label>
-                          <input type="text" class="form-control mt-1" name="nisn" id="nisn" aria-describedby="nisn">                          
+                          <label for="email">EMAIL</label>
+                          <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="nisn">                          
                         </div>
                         <div class="form-group mb-3">
                           <label for="password">PASSWORD</label>

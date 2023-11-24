@@ -2,24 +2,23 @@
 
 class Model extends Database {
 
-    protected $table"";
+    protected $table ="";
     protected $primary_key = "";
 
     function All(){
         try {
             $sql = "SELECT * FROM $this->table";
             return $this->select($sql);
-        } catch(PDOException Serr){
+        } catch(PDOException $err){
             return [];
         }
     }
-    
-    function Insert($args = []){
 
+    function GetByID($id){
         try {
-            $sql = "SELECT * FROM $this->table WHERE $this->primary_key = $id";
+            $sql = "SELECT * FROM $this->table WHERE $this->primary_key = $id"; 
             return $this->select($sql);
-        } catch(PDOException Serr){
+        } catch(PDOException $err) {
             return [];
         }
     }
@@ -27,14 +26,14 @@ class Model extends Database {
     function Insert($args = []){
         try {
             foreach($args as $k=>$v){
-                $field[]$k;
-                $value[]$v;
+                $field[] = $k;
+                $value[] = $v;
             }
 
             $f = join(',',$field);
             $f = "'" . implode ( "', '", $value ) . "'";
 
-            $sql "INSERT INTO $this->table( $f ) VALUES ( $v )";
+            $sql = "INSERT INTO $this->table( $f ) VALUES ( $v )";
 
             return $this->query($sql);
 
@@ -45,7 +44,7 @@ class Model extends Database {
 
     function Update($id,$args = []){
         try {
-            foreach($args as $key=>$value) { 
+            foreach($args as $key=>$value){ 
                 $field[] = $key."='".$value."'";
             }
             $set = join(',',$field);
@@ -53,7 +52,7 @@ class Model extends Database {
         
             return $this->query($sql);
         
-        } catch(PDOException Serr){
+        } catch(PDOException $err){
             return [];
         }
     }
@@ -64,7 +63,7 @@ class Model extends Database {
         
             return $this->query($sql);
         
-        } catch(PDOException Serr){
+        } catch(PDOException $err){
             return [];
         }
     }

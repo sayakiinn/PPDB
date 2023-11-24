@@ -1,13 +1,13 @@
 <?php
 
 class Database {
-    private $db host;
+    private $db_host;
     private $db_user;
     private $db_password;
     private $db_name;
     protected $connection;
 
-    function_construct()
+    function __construct()
     {
         $this->db_host = Config::$db_host;
         $this->db_user = Config::$db_user;
@@ -31,10 +31,10 @@ class Database {
     // Get Data Form Table
     function select($sql){
         try {
-            $cmd = Sthis->connection->prepare($sql);
+            $cmd = $this->connection->prepare($sql);
             $cmd->execute();
             return $cmd->fetchAll();
-        } catch(PDOException Serr){
+        } catch(PDOException $err){
             return [];
         }
     }
@@ -50,7 +50,7 @@ class Database {
         }
     }
 
-    function__destruct()
+    function __destruct()
     {
         $this->connection = null;
     }

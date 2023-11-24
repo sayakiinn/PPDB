@@ -30,8 +30,8 @@
                                 <input type="text" class="form-control mt-1" name="nama" id="nama" aria-describedby="nama">                          
                             </div>                        
                             <div class="form-group  mb-3">
-                                <label for="nisn">NISN</label>
-                                <input type="text" class="form-control mt-1" name="nisn" id="nisn" aria-describedby="nisn">                          
+                                <label for="email">NISN</label>
+                                <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="nisn">                          
                             </div>
                             <div class="form-group  mb-3">
                                 <label for="password">PASSWORD</label>
