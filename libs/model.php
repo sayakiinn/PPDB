@@ -31,14 +31,14 @@ class Model extends Database {
             }
 
             $f = join(',',$field);
-            $f = "'" . implode ( "', '", $value ) . "'";
+            $v = "'" . implode ( "', '", $value ) . "'";
 
             $sql = "INSERT INTO $this->table( $f ) VALUES ( $v )";
 
             return $this->query($sql);
 
         } catch(PDOException $err){
-            return [];
+            echo $err->getMessage();
         }
     }
 

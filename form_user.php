@@ -35,14 +35,14 @@
                         <input type="hidden" name="id_user" value="<?= @$rsUser["id_user"] ?>">
                         <input type="text" name="nm_user" id="nm_user" class="form-control" value="<?= @$rsUser ["nm_user"] ?>">
                     </div>
-                        <div class="mb-3">
+                    <div class="mb-3">
                         <label for="email_user" class="form-label fw-bold">Email</label>
                         <input type="email" name="email_user" id="email_user" class="form-control" value="<?= @$rsUser["email_user"] ?>">
                     </div>
                     <div class="mb-3">
                         <label for="password_user" class="form-label fw-bold">Password</label>
                         <input type="password" name="password_user" id="password_user" class="form-control">
-                        <input type="hidden" name="old_password" value="<?= @$rsUser["password_user"] ?>">
+                        <input type="password" name="old_password" value="<?= @$rsUser["password_user"] ?>">
                     </div>
                     <div class="mb-3">
                         <label for="level_user" class="form-label fw-bold">Level</label>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="status" class="form-label fw-bold">Status</label>
-                            <select class="form-select" name="status" id="status">
+                        <select class="form-select" name="status" id="status">
                             <option <?= @$rsUser["status"] == 1 ? "selected": "" ?> value="1">Aktif</option>
                             <option <?= @$rsUser["status"] == 0 ? "selected": "" ?> value="0">Non Aktif</option>
                         </select>

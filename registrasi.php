@@ -6,7 +6,6 @@ if(isset($_SESSION["login"])){
     header("location:dashboard.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -41,21 +40,20 @@ if(isset($_SESSION["login"])){
                         <?php } ?>
                         <!-- End Message -->
                         <form action="action_registrasi.php" method="POST">
-                        <form action="login.php">
                             <div class="form-group mb-3">
                                 <label for="nama">NAMA</label>
                                 <input type="text" class="form-control mt-1" name="nama" id="nama" aria-describedby="nama">                          
                             </div>                        
                             <div class="form-group  mb-3">
                                 <label for="email">EMAIL</label>
-                                <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="nisn">                          
+                                <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email">                          
                             </div>
                             <div class="form-group  mb-3">
                                 <label for="password">PASSWORD</label>
                                 <input type="password" class="form-control mt-1" name="password" id="password">
                             </div>
                             <div class="form-group  mb-3">
-                                <small id="emailHelp" class="form-text text-muted">Sudah punya Akun ? <a href="index.PHP">Login</a></small>
+                                <small id="emailHelp" class="form-text text-muted">Sudah punya Akun ? <a href="index.php">Login</a></small>
                             </div>
                             <button type="submit" class="btn btn-primary">REGISTRASI</button>
                         </form>                    

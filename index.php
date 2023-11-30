@@ -6,7 +6,6 @@ if(isset($_SESSION["login"])){
     header("location:dashboard.php");
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,17 +37,16 @@ if(isset($_SESSION["login"])){
                             <div class="alert alert-info" role="alert"> 
                                 <?= $_GET["pesan"] ?>
                             </div>
-                        <?php } ?>
-                        <!-- End Message -->
-                        <form action="action_registrasi.php" method="POST">
-                    <form action="dashboard.html" method="POST">
+                    <?php } ?>
+                    <!-- End Message -->
+                    <form action="action_login.php" method="POST">
                         <div class="form-group mb-3">
-                          <label for="email">EMAIL</label>
-                          <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email">                          
+                            <label for="email">EMAIL</label>
+                            <input type="email" class="form-control mt-1" name="email" id="email" aria-describedby="email">                          
                         </div>
                         <div class="form-group mb-3">
-                          <label for="password">PASSWORD</label>
-                          <input type="password" class="form-control mt-1" name="password" id="password">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" class="form-control mt-1" name="password" id="password">
                         </div>
                         <div class="form-group mb-3">
                             <small id="emailHelp" class="form-text text-muted">Belum punya Akun ? <a href="registrasi.php">Registrasi</a></small>
