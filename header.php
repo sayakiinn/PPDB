@@ -54,6 +54,9 @@ include "libs/inc.php";
                             <a class="nav-link" href="#"><i class="fas fa-table"></i> Data Pendaftar</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="data_jurusan.php"><i class="fas fa-table"></i> Data Jurusan</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-user"></i> Users</a>
                         </li>
                         <li class="nav-item">
