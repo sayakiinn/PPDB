@@ -17,7 +17,7 @@
         <?php } ?>
         <!-- pesan  -->
 
-        <a href="form_jurusan.php" class="btn btn-danger btn-sm mb-3"><i class="fas fa-user-plus"></i> tambah</a>
+        <a href="form_jurusan.php" class="btn btn-danger btn-sm mb-3"><i class="fas fa-user-plus"></i>ADD NEW</a>
 
         <div class="table-responsive table">
             <table class="table table-bordered ">
