@@ -43,7 +43,7 @@ include "libs/inc.php";
                     </div>
                     <div class="info-login">
                         <div class="d-flex">
-                            <img src="assets/images/avatar.png" alt="">
+                            <img src="assets/images/newlogo.png" alt="">
                             <?php $auth = $_SESSION["login"]; ?>
                             <p>
                                 <strong class="d-block"><?= $auth["nm_user"] ?></strong>
