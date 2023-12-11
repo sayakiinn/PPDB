@@ -19,7 +19,15 @@ include "libs/inc.php";
     <title>Dashboard</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+
+    <!-- Data Table -->
+    <link rel="stylesheet" href="assets/plugins/DataTables/DataTables-1.13.8/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/plugins/DataTables/Responsive-2.5.0/css/responsive.bootstrap5.min.css">
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- JQuery -->
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
 </head>
 
 <body>
@@ -45,23 +53,31 @@ include "libs/inc.php";
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#"><i class="fas fa-home"></i> Dashboard</a>
+                            <a class="nav-link active" href="dashboard.php"><i class="fas fa-home"></i> Dashboard</a>
                         </li>
+                        <!-- Tampil Jika Yang Login User -->
+                        <?php if($auth["level_user"]=="user"){ ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-file-alt"></i> Formulir Pendaftaran</a>
+                            <a class="nav-link" href="form_daftar.php"><i class="fas fa-file-alt"></i> Formulir Pendaftaran</a>
                         </li>
+                        <?php } ?>
+                        <!-- End Menu User -->
+                        <!-- Tampil Jika Yang Login Admin -->
+                        <?php if($auth["level_user"]=="Admin"){ ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-table"></i> Data Pendaftar</a>
+                            <a class="nav-link" href="data_daftar.php"><i class="fas fa-table"></i> Data Pendaftar</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="data_jurusan.php"><i class="fas fa-table"></i> Data Jurusan</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-user"></i> Users</a>
+                            <a class="nav-link" href="data_user.php"><i class="fas fa-user"></i> Users</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-print"></i> Laporan</a>
+                            <a class="nav-link" href="laporan.php"><i class="fas fa-print"></i> Laporan</a>
                         </li>
+                        <?php } ?>
+                        <!-- End Menu Admin -->
                         <li class="nav-item">
                             <a class="nav-link" href="action_logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
                         </li>

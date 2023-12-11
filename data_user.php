@@ -23,7 +23,7 @@
         <a href="form_user.php" class="btn btn-danger btn-sm mb-3"><i class="fas fa-plus"></i> ADD NEW</a>
 
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="dt-Table table table-bordered">
                 <thead class="bg-danger text-light">
                     <tr>
                         <th scope="col">ID</th>

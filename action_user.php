@@ -2,8 +2,8 @@
 
 include "libs/inc.php";
 
-$action = isset($_GET["ac"]) ? $_GET["ac"]:
-$user = new MUser(); // INstance dari model user MUser
+$action = isset($_GET["ac"]) ? $_GET["ac"]: "";
+$user = new MUser(); // Instance dari model user MUser
 
 switch($action){
     case "add":

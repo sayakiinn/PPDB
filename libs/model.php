@@ -59,7 +59,7 @@ class Model extends Database {
 
     function Delete($id) {
         try {
-            $sql = "DELETE FROM $this->table WHERE $this->primary_key $id";
+            $sql = "DELETE FROM $this->table WHERE $this->primary_key = $id";
         
             return $this->query($sql);
         

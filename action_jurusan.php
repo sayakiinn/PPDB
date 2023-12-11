@@ -3,13 +3,14 @@
 include "libs/inc.php";
 
 $action = isset($_GET["ac"]) ? $_GET["ac"] :  "";
-$jurusan = new Mjurusan();
+$jurusan = new MJurusan(); //Instance dari model jurusan MJurusan
 
 
 switch($action){
     case "add":
+        //Tambah Data
         try {
-           $jurusan->insert( [
+           $jurusan->insert([
                 "nama_jurusan" => $_POST["nama_jurusan"],
                 "pagu_jurusan" => $_POST["pagu_jurusan"],
                 "status_jurusan" => $_POST["status_jurusan"],
@@ -20,6 +21,7 @@ switch($action){
         }
         break;
     case "edit":
+        //Edit Data
         try {
             $jurusan->update(
                 $_POST["id_jurusan"],
@@ -35,6 +37,7 @@ switch($action){
         }
         break;
     case "delete":
+        //Hapus Data
         try {
             $jurusan->Delete($_GET["id"]);
                 header("location:data_jurusan.php?pesan=Data berhasil di dihapus");
