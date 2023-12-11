@@ -13,7 +13,7 @@
             $total = $daftar->All();
 
             //Jumlah Per Jurusan
-            $total_jurusan = $daftar->select("SELECT j.nama_jurusan,count(d.id_jurusan) as total FROM tb_daftar as d RIGHT JOIN tb jurusan as j ON d.id jurusan = j.id_jurusan GROUP BY j.id jurusan");
+            $total_jurusan = $daftar->select("SELECT j.nama_jurusan,count(d.id_jurusan) as total FROM tb_daftar as d RIGHT JOIN tb_jurusan as j ON d.id_jurusan = j.id_jurusan GROUP BY j.id_jurusan");
         ?>
         <!-- End Data Statistik -->
         <div class="info">
@@ -21,7 +21,7 @@
                 <div class="col-md-12">
                     <div class="info-box card mb-3">
                         <div class="row no-gutters">
-                            <div class="icon col-md-4 bg-aqua">
+                            <div class="icon col-md-3 bg-aqua">
                                 <i class="fas fa-users"></i>
                             </div>
                             <div class="col-md-8">
@@ -37,7 +37,7 @@
                 <div class="col-md-6">
                     <div class="info-box card mb-3">
                         <div class="row no-gutters">
-                            <div class="icon col-md-4 bg-red">
+                            <div class="icon col-md-2 bg-green">
                                 <i class="fas fa-users"></i>
                             </div>
                             <div class="col-md-9">
